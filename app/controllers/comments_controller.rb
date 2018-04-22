@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-
+    # before_action :require_login, except: [:create]
 	def create
 		# Get Article comment is attached to
 		@article = Article.find(params[:article_id])

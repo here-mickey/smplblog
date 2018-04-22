@@ -31,13 +31,30 @@
       <%= link_to 'Directions', {:controller => 'pages', :action => 'directions'} %>
       <%= link_to 'Articles', {:controller => 'articles', :action => 'index'} %>
       <%= link_to 'Users', {:controller => 'users', :action => 'index'} %>
+	  <%= link_to 'Authors', {:controller => 'authors', :action => 'index'} %>
+	  <%= link_to 'Tags', {:controller => 'tags', :action => 'index'} %>
     </p>
  
 </nav>
  
 <main id="content">
  
-<%= yield %>
+<body>
+  <div id="container">
+    <div id="content">
+      <%= yield %>
+      <hr>
+      <h6>
+        <% if logged_in? %>
+          <%= "Logged in as #{current_user.email}" %>
+          <%= link_to "(logout)", logout_path %>
+        <% else %>
+          <%= link_to "(login)", login_path %>
+        <% end %>
+      </h6>
+    </div>
+  </div>
+</body>
  
 </main>
  
