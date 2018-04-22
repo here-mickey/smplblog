@@ -24,8 +24,8 @@ Rails.application.routes.draw do
   
   
   # update your   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  
-  root 'articles#index'
+  # root 'articles#index' -- also works
+  root to: 'articles#index'
   
   
 end
