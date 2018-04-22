@@ -25,6 +25,12 @@
     <%= form.label :user_id %>
     <%= form.number_field :user_id, id: :article_user_id %>
   </div>
+  
+  <p>
+    <%= form.label :tag_list %><br />
+    <%= form.text_field :tag_list %>
+  </p>
+
 
   <div class="actions">
     <%= form.submit %>

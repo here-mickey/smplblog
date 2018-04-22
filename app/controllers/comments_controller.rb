@@ -11,7 +11,7 @@ class CommentsController < ApplicationController
 		redirect_to article_path(@article)
 	end 
 	
-	# private methods must always be after the creeate
+	# private methods must always be after the create
 	# TODO ML - temp fix
 	# private
 		def comment_params
